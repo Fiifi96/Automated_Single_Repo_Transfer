@@ -1,20 +1,32 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+This Repository is in attended to migrate a single repo from a source repo service to azure devops repositories
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Before executing this repo you must first install this dependency;
+1. Terraform
+2. Git
+
+There are two terraform file included in this repo
+1.	main.tf
+This file contains the terraform script that migrates the repositories.
+
+2.	variable.tf
+This file contains the variables intended to make the main.tf customizable for you needs
 
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+1. Clone the repository to your personal workspace 
+a. Go to the repository and click on the clone button
+b. You'll see HTTPS and SSH, click on HTTPS and copy the link next to the HTTPS
+c. In your workspace ternimal initialize git using the command ------> git init 
+d. Then run ----------> git clone (link you copied)
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+2. Running the terraform script
+a. Initialize terraform in your workspace 
+by running ------------> terraform init
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+b. To visualize to end product of your migration 
+Run -------> terraform plan  
+
+c. To proceed with the migration 
+Run ----------> terraform apply
+If your comfortable with the changes type yes
